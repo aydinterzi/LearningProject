@@ -1,9 +1,20 @@
 ﻿using Business.Concrete;
+using DataAccess.Concrete.EntityFramework;
 using DataAccess.Concrete.InMemory;
+using System;
 
-ProductManager productManager = new ProductManager(new InMemoryProductDal());
-
-foreach (var product in productManager.GetAll())
+namespace ConsoleUI
 {
-    Console.WriteLine(product.ProductName);
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            ProductManager productManager = new ProductManager(new EfProductDal());
+
+            foreach (var product in productManager.GetAll())
+            {
+                Console.WriteLine(product.ProductName);
+            }
+        }
+    }
 }
