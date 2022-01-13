@@ -1,8 +1,8 @@
 ### LearningProject
 ## Layers
-Used Technologies
-Restful API
-Result Types
+Used Technologies  
+Restful API  
+Result Types  
 Interceptor
 Autofac
 AOP, Aspect Oriented Programming
